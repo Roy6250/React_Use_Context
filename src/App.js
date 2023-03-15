@@ -59,6 +59,7 @@ function App() {
         label:"test label",
         value:"89"
       })
+      console.log("done")
     fetchTours();
     console.log("Inside useEffect")
 
