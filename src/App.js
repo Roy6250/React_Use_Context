@@ -4,8 +4,8 @@ import Tour from './Tour';
 import Tours from './Tours'
 import ReactGA from "react-ga";
 
-// const TRACKING_ID="G-655V9J6R77"
-// ReactGA.initialize(TRACKING_ID);
+const TRACKING_ID="G-655V9J6R77"
+ReactGA.initialize(TRACKING_ID);
 
 const url = 'https://course-api.com/react-tours-project'
 
@@ -28,12 +28,12 @@ function App() {
 
   const fetchTours= async () =>{
 
-    // ReactGA.event({
-    //     category:"cake",
-    //     action:"test action",
-    //     label:"test label",
-    //     value:"89"
-    //   })
+    ReactGA.event({
+        category:"cake",
+        action:"test action",
+        label:"test label",
+        value:"89"
+      })
     setLoading(true);
 
     try{
@@ -59,7 +59,7 @@ function App() {
     console.log("before function call")
 
      console.log(window.location.pathname)
-    //  ReactGA.pageview(window.location.pathname)
+     ReactGA.pageview(window.location.pathname)
      
       console.log("done")
     fetchTours();
