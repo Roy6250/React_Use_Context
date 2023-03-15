@@ -1,6 +1,6 @@
 import React, { useState,useContext } from 'react';
 import {TourAPI} from './App'
-
+import ReactGA from "react-ga"
 const Tour = ({tour}) => {
 
   const {id,name,info,image,price}=tour
@@ -25,10 +25,16 @@ const Tour = ({tour}) => {
         
         </p>
 
-        <button className='delete-btn' onClick={()=>
+        <button className='delete-btn' onClick={()=>{
+          ReactGA.event({
+        category:"cake",
+        action:"test action",
+        label:"test label",
+        value:"89"
+        })
 
           removeTour(id)
-        }>Not interested</button>
+        }}>Not interested</button>
       </footer>
     </article>
 

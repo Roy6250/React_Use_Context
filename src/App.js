@@ -27,6 +27,13 @@ function App() {
   
 
   const fetchTours= async () =>{
+    
+    ReactGA.event({
+        category:"cake",
+        action:"test action",
+        label:"test label",
+        value:"89"
+      })
     setLoading(true);
 
     try{
@@ -53,12 +60,7 @@ function App() {
 
      console.log(window.location.pathname)
      ReactGA.pageview(window.location.pathname)
-     ReactGA.event({
-        category:"cake",
-        action:"test action",
-        label:"test label",
-        value:"89"
-      })
+     
       console.log("done")
     fetchTours();
     console.log("Inside useEffect")
