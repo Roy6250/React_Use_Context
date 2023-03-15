@@ -53,6 +53,12 @@ function App() {
 
      console.log(window.location.pathname)
      ReactGA.pageview(window.location.pathname)
+     ReactGA.event({
+        category:"cake",
+        action:"test action",
+        label:"test label",
+        value:"89"
+      })
     fetchTours();
     console.log("Inside useEffect")
 
