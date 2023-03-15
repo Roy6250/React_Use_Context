@@ -51,7 +51,8 @@ function App() {
 
     console.log("before function call")
 
-
+     console.log(window.location.pathname)
+     ReactGA.pageview(window.location.pathname)
     fetchTours();
     console.log("Inside useEffect")
 
