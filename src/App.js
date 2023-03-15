@@ -2,6 +2,10 @@ import React, { useState, useEffect,useContext,createContext } from 'react'
 import Loading from './Loading'
 import Tour from './Tour';
 import Tours from './Tours'
+import ReactGA from "react-ga";
+
+const TRACKING_ID="G-655V9J6R77"
+ReactGA.initialize(TRACKING_ID);
 
 const url = 'https://course-api.com/react-tours-project'
 
